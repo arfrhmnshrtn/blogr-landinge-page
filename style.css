@@ -134,22 +134,24 @@
     border: 1px solid rgb(255, 164, 154);
 }
 .home .bg img{
-    height: 1500px;
+    height: 1800px;
     width: 2000px;
-    /* background-color: red; */
     position: absolute;
-    top: -400px;
-    right: -600px;
+    top: -600px;
+    right: -500px;
     z-index: -1;
+    object-fit: cover;
 }
 .home .navbar .humberger-menu{
     display: none;
+    
 }
 
 
-
+/* container kedua */
 .container-dua{
-    padding: 100px 0 100px 100px;
+    /* background-color: red; */
+    padding: 50px 0;
 }
 .container-dua .judul{
     /* background-color: red; */
@@ -163,6 +165,7 @@
     grid-template-columns: 1fr 1fr;
     place-items: center;
     gap: 100px;
+    padding-left: 100px;
 }
 .container-dua .content-container .content .card{
     padding: 30px 0;
@@ -189,6 +192,65 @@
     display: none;    
 }
 
+
+/* section banner mobile */
+.section-mobile{
+    background-color:  hsl(208, 49%, 24%);
+    position: relative;
+    margin-top: 100px;
+    border-radius: 0 50px 0 50px;
+    
+    /* padding: 0 100px; */
+}
+.section-mobile .wrapp{
+    overflow: hidden;
+    /* background-color: red; */
+}
+.section-mobile .wrapp .banner{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'kiri kanan'
+    'kiri kanan';
+    padding: 0 50px;
+    place-items: center;
+}
+.section-mobile .banner .circle img{
+    position: absolute;
+    top: -500px;
+    left: -300px;
+    z-index: 999;
+    
+}
+.section-mobile .banner .circle{
+    grid-area: kiri;
+    background-color: blue;
+}
+.section-mobile .banner .text-content{
+    grid-area: kanan;
+    padding: 110px 0;
+    color: #fff;
+    /* background-color: red; */
+}
+.section-mobile .banner .text-content h3{
+    font-size: 2em;
+}
+.section-mobile .banner .text-content P{
+    color: rgba(250, 250, 250, 0.5);
+    padding: 20px 0;
+}
+.section-mobile .phone-img{
+    /* height: 500px;
+    width: 500px; */
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 9999;
+}
+.section-mobile .phone-img img{
+    width: 100%;
+    height: 100%;
+}
 
 @media screen and (max-width: 980px){
     .home .navbar{
@@ -248,34 +310,57 @@
         margin: 0;
     }
     .home .navbar .humberger-menu{
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .container-dua .content-container{
         grid-template-columns: 1fr;
         grid-template-areas: 'img img'
         'text text'
         ;
+        padding: 0;
+        gap: 0;
     }
     .container-dua{
-        padding: 100px;
+        margin: 50px 0;
+        /* background-color: red; */
+        text-align: center;
     }
     .container-dua .content-container .content{
         grid-area: text;
+        padding: 0 100px;
     }
     .container-dua .content-container .img{
         grid-area: img;
+        /* background-color: blue; */
     }
     .container-dua .content-container .img .dekstop{
         display: none;
     }
     .container-dua .content-container .img .mobile{
         display: inherit;
-    }
-    .container-dua .content-container .img img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
         margin-right: 0;
-        height: auto;
-        width: auto;
+        margin-top: 20px;
     }
+    .section-mobile .wrapp .banner{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'kiri kiri'
+        'kanan kanan';
+    }
+    .section-mobile .banner .circle{
+        grid-area: kiri;
+    }
+    .section-mobile .banner .text-content{
+        grid-area: kanan;
+        z-index: 9999999;
+        margin-top: 500px;
+    }
+    
 }
 
 @media screen and (max-width: 600px){
@@ -294,7 +379,17 @@
     .container-dua{
         padding: 20px;
     }
-    
+    .container-dua .content-container .content{
+        grid-area: text;
+        padding: 0 10px;
+    }
+    .section-mobile .banner .text-content{
+        margin-top: 450px;
+        padding: 0;
+    }
+    .section-mobile .wrapp .banner{
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -306,5 +401,15 @@
     }
     .home .text-content .judul{
         font-size: 2em;
+    }
+    .section-mobile .banner .text-content{
+        margin-top: 300px;
+    }
+    .section-mobile .banner .text-content h3{
+        font-size: 2em;
+        text-align: center;
+    }
+    .section-mobile .banner .text-content p{
+        text-align: center;
     }
 }

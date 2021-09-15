@@ -11,6 +11,10 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <div class="wrapper">
@@ -56,7 +60,7 @@
                         <a href="" class="btn signup">Sign Up</a>
                     </div>
                 </div>
-                
+
                 <div class="humberger-menu">
                     <img src="images/icon-hamburger.svg" alt="">
                 </div>
@@ -80,19 +84,34 @@
             <div class="judul">Design for the future</div>
             <div class="content-container">
                 <div class="content">
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="200">
                         <h4>Introducing an extensible editor</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos ad animi laborum nulla possimus aliquid quisquam optio consequuntur sed? Ipsam omnis sit, magnam corrupti veritatis rerum fuga sint illo non similique id recusandae laudantium qui, reprehenderit porro minima blanditiis facere, maxime provident! Saepe nobis placeat corporis molestiae obcaecati modi pariatur.</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="400">
                         <h4>Robuts content management</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa perspiciatis quae quisquam qui obcaecati voluptate, doloremque repellendus nisi maxime accusamus delectus molestias illum vero porro tempore suscipit iusto deleniti quaerat amet reprehenderit corrupti vel. Magnam natus eius provident quibusdam sit eum dolor, quasi doloremque iure ducimus fugit ipsa. Neque.</p>
                     </div>
                 </div>
                 <div class="img">
-                    <img class="dekstop" src="images/illustration-editor-desktop.svg" alt="">
+                    <img class="dekstop" src="images/illustration-editor-desktop.svg" alt="" data-aos="fade-left">
                     <img class="mobile" src="images/illustration-editor-mobile.svg" alt="">
                 </div>
+            </div>
+        </section>
+
+
+        <!-- section promo mobile -->
+        <section class="section-mobile">
+            <div class="wrapp">
+                <div class="banner">
+                    <div class="circle"><img src="images/bg-pattern-circles.svg" alt=""></div>
+                    <div class="text-content" data-aos="fade-right" data-aos-delay="200">
+                        <h3>State of the Art Infrastucture</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nisi in cum excepturi pariatur, dolores optio, voluptates nam numquam perspiciatis natus repudiandae quo quidem consequatur esse velit animi officia nemo.</p>
+                    </div>
+                </div>
+                <div class="phone-img"><img src="images/illustration-phones.svg" alt="" data-aos="zoom-in" data-aos-delay="200"></div>
             </div>
         </section>
     </div>
@@ -101,5 +120,12 @@
 
     <!-- my script -->
     <script src="script.js"></script>
+
+    <!-- script aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
 </body>
 </html>
